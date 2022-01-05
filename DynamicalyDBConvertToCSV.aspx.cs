@@ -47,7 +47,6 @@ namespace DataBaseConvertCsvFile
                             }
 
                             //Download the CSV file.
-
                             Response.Clear();
                             Response.Buffer = true;
                             Response.AddHeader("content-disposition", "attachment;filename=SqlExport.csv");
@@ -56,10 +55,6 @@ namespace DataBaseConvertCsvFile
                             Response.Output.Write(csv);
                             Response.Flush();
                             Response.End();
-
-                            //StreamWriter streamWriter = new StreamWriter(@"E:\Niralee_Rampariya\C#\Files\Data.csv");
-                            //streamWriter.WriteLine(csv.ToString());
-                            //streamWriter.Close();
                         }
                     }
                 }
